@@ -295,5 +295,8 @@ li>h3 {
 }
 li>p {
     padding: 10px 20px 0;
-
+}
+.timestamp {
+  float: right;
+  font-weight: 100;
 }
