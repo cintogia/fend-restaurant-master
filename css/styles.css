@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+html {
+  overflow-x: hidden;
+}
 
 body,
 td,
@@ -401,7 +404,8 @@ li>p {
     }
 
     .filter-options {
-        padding: 0 5% 1%;
+        padding-left: 5%;
+        width: auto;
     }
 
     #restaurants-list {
