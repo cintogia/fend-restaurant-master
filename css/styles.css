@@ -388,6 +388,7 @@ li>p {
         display: flex;
         flex-wrap: wrap;
         justify-content: unset;
+        padding: 0 0 7% 4%;
     }
 
     #restaurants-list li {
@@ -406,10 +407,6 @@ li>p {
     .filter-options {
         padding-left: 5%;
         width: auto;
-    }
-
-    #restaurants-list {
-        padding: 0 4% 7%;
     }
 
     .inside #map-container {
