@@ -88,7 +88,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // add responsive images
+  image.src = `img/${restaurant.id}-small.jpg`;
+  image.srcset = `${DBHelper.imageUrlForRestaurant(restaurant)} 800w, img/${restaurant.id}-small.jpg 480w`;
   // set alt attribute
   image.alt = `restaurant ${restaurant.name}`;
 

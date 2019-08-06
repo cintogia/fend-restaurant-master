@@ -28,7 +28,17 @@ self.addEventListener("install", event => {
         "img/7.jpg",
         "img/8.jpg",
         "img/9.jpg",
-        "img/10.jpg"
+        "img/10.jpg",
+        "img/1-small.jpg",
+        "img/2-small.jpg",
+        "img/3-small.jpg",
+        "img/4-small.jpg",
+        "img/5-small.jpg",
+        "img/6-small.jpg",
+        "img/7-small.jpg",
+        "img/8-small.jpg",
+        "img/9-small.jpg",
+        "img/10-small.jpg"
       ]);
     })
   );
@@ -62,7 +72,8 @@ self.addEventListener("activate", event => {
  */
 
 self.addEventListener("fetch", event => {
-  if (event.request.url.startsWith(self.location.origin)) {
+  // check only for restaurant sites and prevent serviceWorker file from getting cached
+  if (event.request.url.startsWith(self.location.origin) && event.request.url != self.location.origin + '/sw.js') {
     event.respondWith(
       caches.match(event.request).then(response => {
         if (response) {

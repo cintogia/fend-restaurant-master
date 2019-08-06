@@ -136,7 +136,7 @@ nav h1 a {
     text-decoration: underline;
 }
 
-/* skip link modal*/
+/* Add skip-to-content link on focus */
 .skiplink {
     position: absolute;
     top: -40px;
