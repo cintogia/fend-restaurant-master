@@ -215,7 +215,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 }*/
 
 /**
- * Check for ServiceWorker Support
+ * Check for serviceWorker Support
  */
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").then( registration => {
