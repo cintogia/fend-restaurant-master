@@ -136,6 +136,18 @@ nav h1 a {
     text-decoration: underline;
 }
 
+/* skip link modal*/
+.skiplink {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 100;
+}
+
+.skiplink:focus {
+    top: 0;
+}
+
 /* ====================== Map ====================== */
 #map {
     height: 400px;

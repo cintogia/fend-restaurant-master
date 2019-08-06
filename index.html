@@ -13,16 +13,17 @@
 
 <body>
   <header>
+    <a href="#maincontent" class="skiplink">Skip to main content</a>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent">
+  <main>
     <section id="map-container">
       <div id="map"></div>
     </section>
-    <section>
+    <section id="maincontent">
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" accesskey="n" aria-label="Filter neighborhoods">
