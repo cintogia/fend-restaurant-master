@@ -5,10 +5,11 @@
 let staticCacheName = "restaurants-static-v2";
 let restaurantsCache = "restaurants-visited";
 
-self.addEventListener("install", function(event) {
+// ADD STATIC CACHE
+self.addEventListener("install", event => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(staticCacheName).then(function(cache) {
+    caches.open(staticCacheName).then(cache => {
       return cache.addAll([
         "/",
         "index.html",
@@ -34,19 +35,19 @@ self.addEventListener("install", function(event) {
 });
 
 // DELETE OLD CACHE IF CACHE NAME DOES NOT MATCH WITH EXISTING ONES
-self.addEventListener("activate", function(event) {
+self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames
-          .filter(function(cacheName) {
+          .filter(cacheName => {
             return (
               cacheName.startsWith("restaurants-") &&
               cacheName != staticCacheName &&
               cacheName != restaurantsCache
             );
           })
-          .map(function(cacheName) {
+          .map(cacheName => {
             return caches.delete(cacheName);
           })
       );
