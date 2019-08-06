@@ -234,6 +234,7 @@ nav h1 a {
     text-decoration: none;
     text-transform: uppercase;
     max-width: 33%;
+    align-self: end;
 }
 
 /* ====================== Restaurant Details ====================== */
