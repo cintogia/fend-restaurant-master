@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body,
@@ -118,7 +118,7 @@ nav h1 a {
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
+#breadcrumb li + li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
@@ -158,7 +158,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
     width: 100%;
-    background-color: #3397DB;
+    background-color: #3397db;
     align-items: center;
     padding-bottom: 10px;
 }
@@ -187,7 +187,7 @@ nav h1 a {
 
 /*add custom focus for more accessibility*/
 select:focus {
-    box-shadow: 0 0 3px 3px  rgba(0, 0, 0, .4);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -256,24 +256,19 @@ select:focus {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-    /*  position: fixed;*/
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-
 .inside #map {
     position: relative;
     background-color: #ccc;
-    /*  height: 100%;
-  width: 100%;*/
 }
 
 .inside #footer {
     bottom: 0;
     position: relative;
-    /*  width: 100%;*/
 }
 
 #restaurant-name {
@@ -318,7 +313,6 @@ select:focus {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
     padding: 40px 30px;
-    /*  width: 50%;*/
 }
 
 #reviews-container {
@@ -351,14 +345,11 @@ select:focus {
     width: 100%;
 }
 
-/*#reviews-list li p {
-  margin: 0 0 10px;
-}*/
 #restaurant-hours td {
     color: #666;
 }
 
-li>h3 {
+li > h3 {
     border-radius: 40px 0 0 0;
     background-color: #333;
     color: #fff;
@@ -366,7 +357,7 @@ li>h3 {
     margin: 0px;
 }
 
-li>p {
+li > p {
     padding: 10px 20px 0;
 }
 
@@ -386,7 +377,7 @@ li>p {
     font-size: 14px;
 }
 
-@media screen and (min-width: 601px)/* and (min-height: 906px)*/ {
+@media screen and (min-width: 601px) /* and (min-height: 906px) */ {
     #restaurants-list {
         display: flex;
         flex-wrap: wrap;
